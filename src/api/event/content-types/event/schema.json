@@ -4,8 +4,7 @@
   "info": {
     "singularName": "event",
     "pluralName": "events",
-    "displayName": "Events",
-    "description": ""
+    "displayName": "event"
   },
   "options": {
     "draftAndPublish": true
@@ -15,20 +14,10 @@
     "name": {
       "type": "string"
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "name"
-    },
     "venue": {
       "type": "string"
     },
     "address": {
-      "type": "string"
-    },
-    "date": {
-      "type": "datetime"
-    },
-    "time": {
       "type": "string"
     },
     "performers": {
@@ -37,16 +26,25 @@
     "description": {
       "type": "richtext"
     },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
     "image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "time": {
+      "type": "string"
     },
     "user": {
       "type": "relation",
